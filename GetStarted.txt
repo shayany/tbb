@@ -6,4 +6,19 @@ compile the file :
 	icpc parallel_for.cpp -I/cluster/software/VERSIONS/intel-2016.0/compilers_and_libraries_2016.0.109/linux/tbb/include 
 	-L/cluster/software/VERSIONS/intel-2016.0/compilers_and_libraries_2016.0.109/linux/tbb/lib/intel64_lin/gcc4.4
 	-o parallel -openmp -std=c++11 -ltbb
+Also we have to add dynamic dependency libraries which in our case I have
+(This will cause some security issues)
+added :
+	export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/cluster/software/VERSIONS/intel-2016.0/compilers_and_libraries_2016.0.109/linux/tbb/lib/intel64_lin/gcc4.4
+(Recommended)
+	go to this directory:
+		/cluster/software/VERSIONS/intel-2016.0/compilers_and_libraries_2016.0.109/linux/tbb/bin
+		
+		OR
+
+		$TBBROOT/bin
+
+	then we have to use this command :
+		 source tbbvars.sh intel64
+	
 

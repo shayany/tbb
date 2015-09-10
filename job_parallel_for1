@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# Job name:
+#SBATCH --job-name=Parallel_For
+#
+# Project:
+#SBATCH --account=nn2849k
+#
+# Wall clock limit:
+#SBATCH --time=00:10:00
+#
+# Max memory usage:
+#SBATCH --mem-per-cpu=3900M
+#SBATCH --exclusive
+# Number of cores:
+#SBATCH --ntasks-per-node=16
+#SBATCH --nodes=1
+## Set up job environment:
+source /cluster/bin/jobsetup
+module purge   # clear any inherited modules
+module load openmpi.intel/1.8.8
+module load intel/2016.0
+##module unload intel/2015.3
+set -o errexit # exit on errors
+# Do some work:
+cd $TBBROOT/bin
+source tbbvars.sh intel64
+cd $SCRATCH
+/usit/abel/u1/shayan/parallel > computationTimeParallel1.txt
+cp computationTimeParallel1.txt /usit/abel/u1/shayan
