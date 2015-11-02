@@ -57,16 +57,6 @@ void main()
     
     std::cout.setf(std::ios::fixed);
     std::cout<<"\n"<<std::setprecision(15)<<timer<<"\n";
-    /*
-    std::cout.setf(std::ios::fixed);
-    for (int i=0; i<n; i++)
-    {
-        for (int j=0; j<m; j++)
-        {
-            std::cout<<std::setprecision(10)<<u[i*m + j]<<"\t";
-        }    
-        std::cout<<"\n";
-    }*/ 
 
     std::cout.setf(std::ios::fixed);
     for (int i=0; i<n; i++)
