@@ -6,8 +6,8 @@
 #include <omp.h>
 #include <vector>
 #include <tbb/blocked_range2d.h>
-int const m=10;
-int const n=50;
+int const m=5;
+int const n=10;
 float u[n*m];
 float f[n*m];
 float u_new[n*m];
@@ -51,7 +51,7 @@ void main()
     
     timer-=omp_get_wtime();//Start timer
     
-    calculate(n, m, u,n,m, f,0,1000,.1,1);
+    calculate(n, m,u,n,m,f,0,1000,.1,1);
 
     timer+=omp_get_wtime();//End timer
     

@@ -5,8 +5,8 @@
 #include <cmath>
 #include <omp.h>
 #include <vector>
-int const m=10;
-int const n=50;
+int const m=5;
+int const n=10;
 float u[n*m];
 float f[n*m];
 float u_new[n*m];
