@@ -5,8 +5,8 @@
 #include <cmath>
 #include <omp.h>
 #include <vector>
-int const m=5;
-int const n=10;
+int const m=1000;
+int const n=1000;
 float u[n*m];
 float f[n*m];
 float u_new[n*m];
@@ -49,7 +49,7 @@ void main()
     std::cout.setf(std::ios::fixed);
     std::cout<<"\nTime:"<<std::setprecision(15)<<timer<<"\n";
     
-    std::cout.setf(std::ios::fixed);
+    /*std::cout.setf(std::ios::fixed);
     for (int i=0; i<n; i++)
     {
         for (int j=0; j<m; j++)
@@ -57,5 +57,5 @@ void main()
             std::cout<<std::setprecision(10)<<u[i*m + j]<<"\t";
         }    
         std::cout<<"\n";
-    }
+    }*/
 }
