@@ -6,9 +6,9 @@
 #include <omp.h>
 #include <vector>
 
-int const n=500;
-int const m=500;
-int const size=500;
+int const n=1000;
+int const m=1000;
+int const size=1000;
 
 void calculate(float a[n][size],float b[size][m],float c[n][m]){    
 
