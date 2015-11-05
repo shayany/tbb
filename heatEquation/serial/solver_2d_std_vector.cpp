@@ -5,15 +5,11 @@
 #include <cmath>
 #include <omp.h>
 #include <vector>
-int const n=2000;
-int const m=2000;
-//float u[n*m];
-//float f[n*m];
-//float u_new[n*m];
+int const n=1000;
+int const m=500;
+void calculate(std::vector<std::vector<double>> &u,std::vector<std::vector<double>> f,double t0,double t1,double dt,double nu){    
 
-void calculate(std::vector<std::vector<float>> &u,std::vector<std::vector<float>> f,float t0,float t1,float dt,float nu){    
-
-    std::vector<std::vector<float>> u_new;
+    std::vector<std::vector<double>> u_new;
     u_new.resize(n);
     double timer=0;
     double avg=0;
@@ -21,7 +17,7 @@ void calculate(std::vector<std::vector<float>> &u,std::vector<std::vector<float>
     {
         u_new[i].resize(m);
     }
-    for(float counterLoop=t0;counterLoop<=t1;counterLoop+=dt)
+    for(double counterLoop=t0;counterLoop<=t1;counterLoop+=dt)
     {
         for(int i=1;i<n-1;i++)
         {
@@ -46,8 +42,8 @@ void main()
 
     double timer=0.;    
 
-    std::vector<std::vector<float>> u;
-    std::vector<std::vector<float>> f;
+    std::vector<std::vector<double>> u;
+    std::vector<std::vector<double>> f;
     u.resize(n);
     f.resize(n);
     for (int i = 0; i < n; ++i)
@@ -74,13 +70,13 @@ void main()
     std::cout.setf(std::ios::fixed);
     std::cout<<"\nTime:"<<std::setprecision(15)<<timer<<"\n";
     
-
+    //printf("\n%f\n",u[100][100]);
     /*std::cout.setf(std::ios::fixed);
     for (int i=0; i<n; i++)
     {
         for (int j=0; j<m; j++)
         {
-            std::cout<<std::setprecision(10)<<u[i][j]<<"\t";
+            std::cout<<std::setprecision(15)<<u[i][j]<<"\t";
         }    
         std::cout<<"\n";
     }*/

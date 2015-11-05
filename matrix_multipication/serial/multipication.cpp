@@ -74,7 +74,7 @@ void main()
         }    
         std::cout<<"\n";
     }
-    std::cout<<"\n";
+    std::cout<<"\n";    
     std::cout.setf(std::ios::fixed);
     for (int i=0; i<n; i++)
     {
