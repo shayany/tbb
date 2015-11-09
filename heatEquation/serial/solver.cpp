@@ -1,3 +1,9 @@
+/*
+ *In this implementation, I have tried to serially solve a heat equation.
+ *I have done the copy using a using a pointer!(For the sake of experiment)
+ *The two dimensional array has been declared in a one dimensional structure.
+ *I did not use the STD:VECTOR
+ */
 #include <iomanip>
 #include <stdlib.h>
 #include <iostream>

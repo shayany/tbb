@@ -1,3 +1,10 @@
+
+/*
+ *I have used STD:VECTOR 1D
+ *
+ *
+ *
+ */
 #include <iomanip>
 #include <stdlib.h>
 #include <iostream>
@@ -52,12 +59,12 @@ void main()
     std::cout<<"\n"<<std::setprecision(15)<<timer<<"\n";
     
     /*std::cout.setf(std::ios::fixed);
-    for (int i=0; i<n; i++)
-    {
-        for (int j=0; j<m; j++)
-        {
-            std::cout<<std::setprecision(10)<<u[i*m + j]<<"\t";
-        }    
-        std::cout<<"\n";
-    }*/          
+ *     for (int i=0; i<n; i++)
+ *         {
+ *                 for (int j=0; j<m; j++)
+ *                         {
+ *                                     std::cout<<std::setprecision(10)<<u[i*m + j]<<"\t";
+ *                                             }    
+ *                                                     std::cout<<"\n";
+ *                                                         }*/          
 }

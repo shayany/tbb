@@ -1,3 +1,10 @@
+
+/*
+ *
+ *2D converted to 1D
+ *Global variable
+ *
+ */
 #include <iomanip>
 #include <stdlib.h>
 #include <iostream>
